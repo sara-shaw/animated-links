@@ -18,6 +18,13 @@ h1 {
   font-size: 40px;
 }
 
+button {
+  background-color: rgb(211, 142, 14);
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -38,16 +45,48 @@ h1 {
   height: auto;
 }
 
-.grid-item h3 {
+.grid-item .header-before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 2rem;
   color: #fff;
   text-align: center;
   background-color: rgba(103, 164, 179, 0.8);
   width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(27, 32, 58, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  text-align: center;
+  color: white;
+}
+
+.grid-item:hover .overlay {
+  height: 100%;
+}
+
+.grid-item:hover .header-before {
+  opacity: 0;
+}
+
+h3 {
+  margin-top: 20%;
+  font-size: 2rem;
+}
+
+p {
+  margin: 30px;
 }
